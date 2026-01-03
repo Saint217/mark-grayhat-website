@@ -1,0 +1,18 @@
+{
+    "go.toolsEnvVars": {
+        "GOAMD64": "v1"
+    },
+    "markdownlint.config": {
+        "extends": "markdownlint:recommended"
+    },
+    "json.schemas": [],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./js",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}
