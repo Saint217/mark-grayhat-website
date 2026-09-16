@@ -1,1046 +1,904 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mark Grayhat - Ethical Hacker & Cybersecurity Consultant. Professional penetration testing, security audits, and cybersecurity consulting services.">
-    <meta name="keywords" content="ethical hacking, cybersecurity, penetration testing, security consultant, vulnerability assessment">
-    <title>Mark Grayhat | Ethical Hacker & Cybersecurity Consultant</title>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grayhat Global — Digital Forensics & Cybersecurity Consultant. Expert penetration testing, security audits, vulnerability assessments, incident response, and advisory services for businesses, legal teams, and regulated organizations." />
+  <meta name="keywords" content="cybersecurity consultant, digital forensics, penetration testing, security audit, vulnerability assessment, incident response, OSCP" />
+  <meta name="author" content="Grayhat Global" />
+  <meta property="og:title" content="Grayhat Global | Cybersecurity & Digital Forensics Consultant" />
+  <meta property="og:description" content="Precision-driven cybersecurity consulting — penetration testing, forensics, and security advisory for businesses, legal teams, and regulated industries." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Grayhat Global | Cybersecurity & Digital Forensics Consultant</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Grayhat Global Cybersecurity Consulting",
+    "description": "Digital forensics and cybersecurity consulting — penetration testing, incident response, and security advisory.",
+    "serviceType": "Cybersecurity Consulting",
+    "areaServed": "Worldwide",
+    "founder": {
+      "@type": "Person",
+      "name": "Grayhat Global",
+      "jobTitle": "Cybersecurity Consultant & Digital Forensics Expert"
+    }
+  }
+  </script>
 </head>
 <body>
-    
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <i class="fas fa-shield-halved"></i>
-                <span>MARK GRAYHAT</span>
-            </div>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
-            </ul>
-        </div>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <div class="container nav-container">
+
+        <a href="#home" class="logo" aria-label="Grayhat Global — Home">
+          <div class="logo-icon">
+            <i class="fas fa-shield-halved" aria-hidden="true"></i>
+          </div>
+          <span>GRAYHAT<span class="logo-accent">GLOBAL</span></span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu" role="list">
+          <li><a href="#home"         class="nav-link" data-section="home">Home</a></li>
+          <li><a href="#services"     class="nav-link" data-section="services">Services</a></li>
+          <li><a href="#industries"   class="nav-link" data-section="industries">Industries</a></li>
+          <li><a href="#results"      class="nav-link" data-section="results">Results</a></li>
+          <li><a href="#process"      class="nav-link" data-section="process">Process</a></li>
+          <li><a href="#faq"          class="nav-link" data-section="faq">FAQ</a></li>
+          <li>
+            <a href="#contact" class="btn btn-primary btn-nav" aria-label="Contact Grayhat Global">
+              <i class="fas fa-terminal" aria-hidden="true"></i> Get in Touch
+            </a>
+          </li>
+        </ul>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile navigation" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="matrix-rain" id="matrixRain"></div>
-            <div class="cyber-grid"></div>
-        </div>
-        
-        <div class="container hero-content">
-            <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
-                <span class="hero-badge">
-                    <i class="fas fa-lock"></i> CERTIFIED ETHICAL HACKER
-                </span>
-                <h1 class="hero-title">
-                    <span class="glitch" data-text="SECURE YOUR">SECURE YOUR</span><br>
-                    <span class="highlight">DIGITAL FORTRESS</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Elite cybersecurity services from a certified ethical hacker. 
-                    Protect your business from evolving cyber threats with cutting-edge 
-                    security solutions and penetration testing.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-shield-halved"></i> Get Protected Now
-                    </a>
-                    <a href="#services" class="btn btn-secondary">
-                        <i class="fas fa-arrow-right"></i> Explore Services
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-number" data-target="500">0</div>
-                        <div class="stat-label">Security Audits</div>
-                    </div>
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                        <div class="stat-number" data-target="98">0</div>
-                        <div class="stat-label">Success Rate %</div>
-                    </div>
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-                        <div class="stat-number" data-target="15">0</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                </div>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero hero-authority" id="home" aria-labelledby="hero-headline">
+      <div class="hero-background" aria-hidden="true">
+        <canvas id="matrixRain" class="matrix-canvas"></canvas>
+        <div class="cyber-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="900">
+          <div class="hero-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            Available for Engagements
+          </div>
+
+          <h1 class="hero-title" id="hero-headline">
+            <span class="glitch" data-text="CYBER">CYBER</span><br />
+            <span class="hero-title-sub">SECURITY &amp;</span><br />
+            <span class="highlight">FORENSICS</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            I help businesses, legal teams, and regulated organizations <strong>uncover security risks</strong>, investigate incidents, and strengthen defenses — with clear reporting, practical remediation, and discreet engagement handling.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i class="fas fa-rocket" aria-hidden="true"></i>
+              Start Your Assessment
+            </a>
+            <a href="#results" class="btn btn-secondary btn-lg">
+              <i class="fas fa-chart-bar" aria-hidden="true"></i>
+              View Results
+            </a>
+          </div>
+
+          <div class="hero-trust-points" role="list">
+            <div class="trust-point" role="listitem">
+              <i class="fas fa-user-shield" aria-hidden="true"></i>
+              <span>OSCP Certified</span>
             </div>
-            
-            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
-                <div class="security-shield">
-                    <div class="shield-core">
-                        <i class="fas fa-shield-halved"></i>
-                    </div>
-                    <div class="shield-ring ring-1"></div>
-                    <div class="shield-ring ring-2"></div>
-                    <div class="shield-ring ring-3"></div>
-                </div>
+            <div class="trust-point" role="listitem">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              <span>NDA-Ready</span>
             </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
+            <div class="trust-point" role="listitem">
+              <i class="fas fa-globe" aria-hidden="true"></i>
+              <span>Global Clients</span>
             </div>
-            <p>Scroll to explore</p>
+          </div>
         </div>
+
+        <div class="hero-visual" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200" aria-hidden="true">
+          <div class="security-shield">
+            <div class="shield-ring ring-3">
+              <div class="ring-orbit orbit-3">
+                <div class="orbit-dot"></div>
+              </div>
+            </div>
+            <div class="shield-ring ring-2">
+              <div class="ring-orbit orbit-2">
+                <div class="orbit-dot"></div>
+              </div>
+            </div>
+            <div class="shield-ring ring-1">
+              <div class="ring-orbit orbit-1">
+                <div class="orbit-dot"></div>
+              </div>
+            </div>
+            <div class="shield-core">
+              <i class="fas fa-shield-halved"></i>
+              <div class="shield-pulse"></div>
+            </div>
+
+            <!-- Floating stat cards -->
+            <div class="stat-float stat-float-1">
+              <span class="stat-num">200+</span>
+              <span class="stat-label">Engagements</span>
+            </div>
+            <div class="stat-float stat-float-2">
+              <i class="fas fa-bug"></i>
+              <span class="stat-label">Zero Breaches</span>
+            </div>
+            <div class="stat-float stat-float-3">
+              <span class="stat-num">98%</span>
+              <span class="stat-label">Client Retention</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services section" id="services">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">EXPERTISE</span>
-                <h2 class="section-title">Cybersecurity Services</h2>
-                <p class="section-subtitle">
-                    Comprehensive security solutions tailored to protect your business 
-                    from sophisticated cyber threats
-                </p>
-            </div>
-            
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-bug"></i>
-                    </div>
-                    <h3 class="service-title">Penetration Testing</h3>
-                    <p class="service-description">
-                        Simulated cyber attacks to identify vulnerabilities before malicious 
-                        hackers do. Comprehensive testing of networks, applications, and systems.
-                    </p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Network Penetration Testing</li>
-                        <li><i class="fas fa-check"></i> Web Application Testing</li>
-                        <li><i class="fas fa-check"></i> Mobile App Security</li>
-                        <li><i class="fas fa-check"></i> Social Engineering Tests</li>
-                    </ul>
-                    <a href="#contact" class="service-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3 class="service-title">Security Audits</h3>
-                    <p class="service-description">
-                        Thorough examination of your security infrastructure, policies, and 
-                        procedures to ensure compliance and identify weaknesses.
-                    </p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Infrastructure Review</li>
-                        <li><i class="fas fa-check"></i> Policy Assessment</li>
-                        <li><i class="fas fa-check"></i> Compliance Verification</li>
-                        <li><i class="fas fa-check"></i> Risk Analysis Reports</li>
-                    </ul>
-                    <a href="#contact" class="service-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-magnifying-glass"></i>
-                    </div>
-                    <h3 class="service-title">Vulnerability Assessments</h3>
-                    <p class="service-description">
-                        Systematic evaluation of security weaknesses in your IT environment 
-                        with prioritized remediation recommendations.
-                    </p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Automated Scanning</li>
-                        <li><i class="fas fa-check"></i> Manual Testing</li>
-                        <li><i class="fas fa-check"></i> Prioritized Action Plans</li>
-                        <li><i class="fas fa-check"></i> Continuous Monitoring</li>
-                    </ul>
-                    <a href="#contact" class="service-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-fingerprint"></i>
-                    </div>
-                    <h3 class="service-title">Digital Forensics</h3>
-                    <p class="service-description">
-                        Legal digital investigation services to uncover evidence of security 
-                        breaches, data theft, and cyber crimes.
-                    </p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Incident Response</li>
-                        <li><i class="fas fa-check"></i> Evidence Collection</li>
-                        <li><i class="fas fa-check"></i> Malware Analysis</li>
-                        <li><i class="fas fa-check"></i> Legal Documentation</li>
-                    </ul>
-                    <a href="#contact" class="service-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3 class="service-title">Security Consulting</h3>
-                    <p class="service-description">
-                        Strategic cybersecurity guidance to build robust security frameworks 
-                        and align security with business objectives.
-                    </p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Security Strategy</li>
-                        <li><i class="fas fa-check"></i> Architecture Review</li>
-                        <li><i class="fas fa-check"></i> Compliance Planning</li>
-                        <li><i class="fas fa-check"></i> Risk Management</li>
-                    </ul>
-                    <a href="#contact" class="service-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="service-title">Security Training</h3>
-                    <p class="service-description">
-                        Comprehensive cybersecurity training programs for teams and individuals 
-                        to build a security-aware culture.
-                    </p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Security Awareness</li>
-                        <li><i class="fas fa-check"></i> Technical Workshops</li>
-                        <li><i class="fas fa-check"></i> Certification Prep</li>
-                        <li><i class="fas fa-check"></i> Custom Programs</li>
-                    </ul>
-                    <a href="#contact" class="service-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
+    <!-- ===== PROOF STRIP ===== -->
+    <section class="proof-strip" aria-label="Key credentials and statistics">
+      <div class="container">
+        <div class="proof-grid">
+          <div class="proof-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="proof-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+            <h2 class="proof-number">200+</h2>
+            <p class="proof-label">Security Engagements</p>
+          </div>
+          <div class="proof-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="proof-icon"><i class="fas fa-bug"></i></div>
+            <h2 class="proof-number">1,400+</h2>
+            <p class="proof-label">Vulnerabilities Found</p>
+          </div>
+          <div class="proof-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="proof-icon"><i class="fas fa-building-shield"></i></div>
+            <h2 class="proof-number">50+</h2>
+            <p class="proof-label">Organizations Secured</p>
+          </div>
+          <div class="proof-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="proof-icon"><i class="fas fa-award"></i></div>
+            <h2 class="proof-number">8+</h2>
+            <p class="proof-label">Years of Experience</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section class="certifications section" id="certifications">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">CREDENTIALS</span>
-                <h2 class="section-title">Professional Certifications</h2>
-                <p class="section-subtitle">
-                    Industry-recognized certifications and security credentials
-                </p>
+    <!-- ===== SERVICES ===== -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <div class="section-badge">
+            <i class="fas fa-shield-halved" aria-hidden="true"></i>
+            Core Services
+          </div>
+          <h2 class="section-title" id="services-title">Security Solutions Built for the Real Threat Landscape</h2>
+          <p class="section-subtitle">Every engagement is tailored to your environment, risk profile, and regulatory context — no cookie-cutter checklists.</p>
+        </header>
+
+        <div class="services-grid">
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-icon"><i class="fas fa-crosshairs" aria-hidden="true"></i></div>
+            <h3 class="service-title">Penetration Testing</h3>
+            <p class="service-description">Simulated adversarial attacks that reveal exploitable weaknesses before real attackers do. Network, web app, API, and social engineering vectors covered.</p>
+            <ul class="service-features" aria-label="Penetration Testing features">
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>External &amp; Internal Network Pentesting</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Web Application &amp; API Testing</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Social Engineering &amp; Phishing</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Red Team Operations</span></li>
+            </ul>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-ghost btn-sm">Request a Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            
-            <div class="cert-grid">
-                <div class="cert-badge" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h4>CEH</h4>
-                    <p>Certified Ethical Hacker</p>
-                </div>
-                
-                <div class="cert-badge" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="cert-icon">
-                        <i class="fas fa-shield-halved"></i>
-                    </div>
-                    <h4>OSCP</h4>
-                    <p>Offensive Security Certified Professional</p>
-                </div>
-                
-                <div class="cert-badge" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="cert-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h4>CISSP</h4>
-                    <p>Certified Information Systems Security Professional</p>
-                </div>
-                
-                <div class="cert-badge" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="cert-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h4>CompTIA Security+</h4>
-                    <p>Network Security Certified</p>
-                </div>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="service-icon service-icon-2"><i class="fas fa-microscope" aria-hidden="true"></i></div>
+            <h3 class="service-title">Digital Forensics</h3>
+            <p class="service-description">Court-admissible evidence collection, analysis, and expert reporting. Ideal for legal proceedings, insider threat investigations, and post-breach analysis.</p>
+            <ul class="service-features" aria-label="Digital Forensics features">
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Disk &amp; Memory Forensics</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Mobile Device Investigation</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Network Traffic Analysis</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Expert Witness Reporting</span></li>
+            </ul>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-ghost btn-sm">Start Investigation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="service-icon service-icon-3"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i></div>
+            <h3 class="service-title">Vulnerability Assessment</h3>
+            <p class="service-description">Systematic identification and prioritized remediation roadmap across your entire attack surface — cloud, on-prem, and hybrid environments.</p>
+            <ul class="service-features" aria-label="Vulnerability Assessment features">
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Attack Surface Mapping</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>CVSS Risk Scoring &amp; Prioritization</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Cloud Security Review</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Remediation Roadmap</span></li>
+            </ul>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-ghost btn-sm">Get Assessed <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-icon service-icon-4"><i class="fas fa-fire-extinguisher" aria-hidden="true"></i></div>
+            <h3 class="service-title">Incident Response</h3>
+            <p class="service-description">Rapid containment, root-cause analysis, and full recovery support for active breaches, ransomware, data leaks, and insider threats.</p>
+            <ul class="service-features" aria-label="Incident Response features">
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>24/7 Emergency Response</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Ransomware Containment</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Root-Cause Analysis</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Recovery &amp; Hardening</span></li>
+            </ul>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-ghost btn-sm">Get Help Now <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="service-icon service-icon-5"><i class="fas fa-clipboard-check" aria-hidden="true"></i></div>
+            <h3 class="service-title">Security Audits &amp; Compliance</h3>
+            <p class="service-description">Gap analysis and compliance advisory across NIST, ISO 27001, SOC 2, HIPAA, GDPR, and PCI-DSS frameworks. Clear, actionable reports.</p>
+            <ul class="service-features" aria-label="Compliance features">
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>NIST &amp; ISO 27001 Alignment</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>SOC 2 &amp; PCI-DSS Gap Analysis</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>HIPAA &amp; GDPR Advisory</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Policy &amp; Control Development</span></li>
+            </ul>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-ghost btn-sm">Request Audit <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="service-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="service-icon service-icon-6"><i class="fas fa-lightbulb" aria-hidden="true"></i></div>
+            <h3 class="service-title">Security Advisory</h3>
+            <p class="service-description">Strategic security consulting for boards, leadership, and development teams. Architecture reviews, threat modeling, and vCISO retainer services.</p>
+            <ul class="service-features" aria-label="Advisory features">
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>vCISO Retainer Programs</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Security Architecture Review</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Threat Modeling</span></li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i><span>Board-Level Risk Reporting</span></li>
+            </ul>
+            <div class="service-cta">
+              <a href="#contact" class="btn btn-ghost btn-sm">Explore Retainers <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
         </div>
+
+        <!-- Certifications -->
+        <div class="certifications-mini" data-aos="fade-up">
+          <div class="cert-mini"><i class="fas fa-certificate" aria-hidden="true"></i> OSCP</div>
+          <div class="cert-mini"><i class="fas fa-certificate" aria-hidden="true"></i> CEH</div>
+          <div class="cert-mini"><i class="fas fa-certificate" aria-hidden="true"></i> CISSP</div>
+          <div class="cert-mini"><i class="fas fa-certificate" aria-hidden="true"></i> CISM</div>
+          <div class="cert-mini"><i class="fas fa-certificate" aria-hidden="true"></i> ISO 27001</div>
+          <div class="cert-mini"><i class="fas fa-certificate" aria-hidden="true"></i> CompTIA Security+</div>
+        </div>
+      </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio section" id="portfolio">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">CASE STUDIES</span>
-                <h2 class="section-title">Security Projects</h2>
-                <p class="section-subtitle">
-                    Real-world security engagements and successful threat mitigations
-                </p>
+    <!-- ===== INDUSTRIES ===== -->
+    <section class="section industries" id="industries" aria-labelledby="industries-title">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <div class="section-badge">
+            <i class="fas fa-users-gear" aria-hidden="true"></i>
+            Who I Help
+          </div>
+          <h2 class="section-title" id="industries-title">Serving Organizations Where Security is Non-Negotiable</h2>
+          <p class="section-subtitle">Specialized expertise for regulated industries, high-stakes environments, and complex security requirements.</p>
+        </header>
+
+        <div class="audience-grid">
+          <article class="audience-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="audience-icon"><i class="fas fa-landmark" aria-hidden="true"></i></div>
+            <h3>Financial Services</h3>
+            <p>Banks, fintech, payment processors, and investment firms requiring PCI-DSS compliance, fraud investigation, and insider threat programs.</p>
+            <div class="audience-tags">
+              <span class="tag">PCI-DSS</span>
+              <span class="tag">SOX</span>
             </div>
-            
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <i class="fas fa-building"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-category">Financial Services</span>
-                        <h3 class="portfolio-title">Global Bank Security Overhaul</h3>
-                        <p class="portfolio-description">
-                            Comprehensive penetration testing and security audit for a multinational 
-                            banking institution. Identified 47 critical vulnerabilities and implemented 
-                            robust security framework.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Penetration Testing</span>
-                            <span class="tag">Compliance</span>
-                            <span class="tag">Infrastructure</span>
-                        </div>
-                        <div class="portfolio-results">
-                            <div class="result-item">
-                                <strong>47</strong>
-                                <span>Vulnerabilities Fixed</span>
-                            </div>
-                            <div class="result-item">
-                                <strong>100%</strong>
-                                <span>Compliance Achieved</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <i class="fas fa-cart-shopping"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-category">E-Commerce</span>
-                        <h3 class="portfolio-title">E-Commerce Platform Hardening</h3>
-                        <p class="portfolio-description">
-                            Security assessment and remediation for a high-traffic e-commerce platform 
-                            processing $50M+ annually. Prevented potential data breach affecting 500K+ customers.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Web Security</span>
-                            <span class="tag">PCI-DSS</span>
-                            <span class="tag">API Testing</span>
-                        </div>
-                        <div class="portfolio-results">
-                            <div class="result-item">
-                                <strong>500K+</strong>
-                                <span>Customers Protected</span>
-                            </div>
-                            <div class="result-item">
-                                <strong>$2M</strong>
-                                <span>Breach Cost Saved</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <i class="fas fa-hospital"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-category">Healthcare</span>
-                        <h3 class="portfolio-title">Healthcare HIPAA Compliance</h3>
-                        <p class="portfolio-description">
-                            Complete security audit and HIPAA compliance implementation for a 
-                            multi-location healthcare provider managing 100K+ patient records.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">HIPAA</span>
-                            <span class="tag">Data Protection</span>
-                            <span class="tag">Training</span>
-                        </div>
-                        <div class="portfolio-results">
-                            <div class="result-item">
-                                <strong>100K+</strong>
-                                <span>Records Secured</span>
-                            </div>
-                            <div class="result-item">
-                                <strong>HIPAA</strong>
-                                <span>Fully Compliant</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-image">
-                        <div class="portfolio-overlay">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-category">Manufacturing</span>
-                        <h3 class="portfolio-title">Industrial IoT Security</h3>
-                        <p class="portfolio-description">
-                            Secured industrial control systems and IoT infrastructure for a manufacturing 
-                            facility. Prevented potential ransomware attack targeting production systems.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">IoT Security</span>
-                            <span class="tag">ICS/SCADA</span>
-                            <span class="tag">Incident Response</span>
-                        </div>
-                        <div class="portfolio-results">
-                            <div class="result-item">
-                                <strong>24/7</strong>
-                                <span>Monitoring Setup</span>
-                            </div>
-                            <div class="result-item">
-                                <strong>Zero</strong>
-                                <span>Production Downtime</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </article>
+
+          <article class="audience-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="audience-icon audience-icon-2"><i class="fas fa-hospital" aria-hidden="true"></i></div>
+            <h3>Healthcare &amp; Life Sciences</h3>
+            <p>Hospitals, clinics, and pharmaceutical companies navigating HIPAA, protecting patient data, and responding to ransomware incidents.</p>
+            <div class="audience-tags">
+              <span class="tag">HIPAA</span>
+              <span class="tag">PHI</span>
             </div>
+          </article>
+
+          <article class="audience-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="audience-icon audience-icon-3"><i class="fas fa-scale-balanced" aria-hidden="true"></i></div>
+            <h3>Legal Teams &amp; Law Firms</h3>
+            <p>Litigation support, e-discovery, expert witness testimony, and digital evidence preservation for attorneys and courts.</p>
+            <div class="audience-tags">
+              <span class="tag">E-Discovery</span>
+              <span class="tag">Expert Witness</span>
+            </div>
+          </article>
+
+          <article class="audience-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="audience-icon audience-icon-4"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+            <h3>Technology &amp; SaaS</h3>
+            <p>Product security reviews, DevSecOps integration, API security, and SOC 2 readiness for software companies and cloud platforms.</p>
+            <div class="audience-tags">
+              <span class="tag">SOC 2</span>
+              <span class="tag">DevSecOps</span>
+            </div>
+          </article>
+
+          <article class="audience-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="audience-icon audience-icon-5"><i class="fas fa-building" aria-hidden="true"></i></div>
+            <h3>Enterprise &amp; Corporate</h3>
+            <p>Large-scale security programs, merger &amp; acquisition security due diligence, supply chain risk, and board-level advisory.</p>
+            <div class="audience-tags">
+              <span class="tag">M&amp;A Due Diligence</span>
+              <span class="tag">vCISO</span>
+            </div>
+          </article>
+
+          <article class="audience-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="audience-icon audience-icon-6"><i class="fas fa-shield-virus" aria-hidden="true"></i></div>
+            <h3>Government &amp; Defense</h3>
+            <p>FISMA compliance, classified system reviews, and critical infrastructure protection for government agencies and defense contractors.</p>
+            <div class="audience-tags">
+              <span class="tag">FISMA</span>
+              <span class="tag">CMMC</span>
+            </div>
+          </article>
+
+          <article class="audience-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="audience-icon audience-icon-7"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+            <h3>Education &amp; Research</h3>
+            <p>University networks, research data protection, and academic institution security posture reviews aligned with FERPA and federal guidelines.</p>
+            <div class="audience-tags">
+              <span class="tag">FERPA</span>
+              <span class="tag">Research Data</span>
+            </div>
+          </article>
+
+          <article class="audience-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="audience-icon audience-icon-8"><i class="fas fa-store" aria-hidden="true"></i></div>
+            <h3>Retail &amp; E-Commerce</h3>
+            <p>Customer data protection, payment security, supply chain integrity, and breach investigations for retail and e-commerce operators.</p>
+            <div class="audience-tags">
+              <span class="tag">PCI-DSS</span>
+              <span class="tag">GDPR</span>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials section" id="testimonials">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">CLIENT FEEDBACK</span>
-                <h2 class="section-title">What Clients Say</h2>
-                <p class="section-subtitle">
-                    Trusted by businesses worldwide for exceptional security services
-                </p>
+    <!-- ===== RESULTS ===== -->
+    <section class="section results" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <div class="section-badge">
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
+            Proven Results
+          </div>
+          <h2 class="section-title" id="results-title">Engagements That Made a Difference</h2>
+          <p class="section-subtitle">Anonymized case studies demonstrating real-world impact across industries and security disciplines.</p>
+        </header>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-item" data-aos="fade-up" data-aos-delay="0">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="portfolio-gradient portfolio-gradient-1"></div>
             </div>
-            
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Mark's penetration testing services uncovered critical vulnerabilities we didn't 
-                        know existed. His detailed reports and remediation guidance were invaluable. 
-                        Our security posture has improved dramatically."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4 class="author-name">Sarah Johnson</h4>
-                            <p class="author-title">CTO, TechCorp Solutions</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Professional, thorough, and incredibly knowledgeable. Mark helped us achieve 
-                        HIPAA compliance and trained our entire IT team on security best practices. 
-                        Highly recommended!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4 class="author-name">Dr. Michael Chen</h4>
-                            <p class="author-title">Director, HealthPlus Medical</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "After a security incident, Mark's digital forensics expertise helped us 
-                        understand what happened and how to prevent it. His incident response was 
-                        swift and effective. A true cybersecurity expert."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4 class="author-name">Robert Williams</h4>
-                            <p class="author-title">CEO, SecureBank International</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Mark's security consulting transformed our approach to cybersecurity. His 
-                        strategic guidance helped us build a robust security framework that aligns 
-                        with our business goals. Outstanding service!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4 class="author-name">Emily Rodriguez</h4>
-                            <p class="author-title">CISO, DataFlow Systems</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 5 -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "The security training program Mark developed for our team was exceptional. 
-                        Interactive, practical, and tailored to our specific needs. Our security 
-                        awareness has increased dramatically."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4 class="author-name">James Anderson</h4>
-                            <p class="author-title">IT Manager, Global Logistics Inc.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 6 -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Mark's vulnerability assessment identified weaknesses we weren't aware of. 
-                        His prioritized action plan made remediation straightforward. We now have 
-                        continuous monitoring in place. Excellent work!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4 class="author-name">Lisa Thompson</h4>
-                            <p class="author-title">VP Technology, E-Shop Express</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="portfolio-content">
+              <span class="portfolio-category">Financial Services</span>
+              <h3 class="portfolio-title">Critical Banking Infrastructure Pentest</h3>
+              <p class="portfolio-description">Identified 23 critical vulnerabilities in a regional bank's core infrastructure — including an unauthenticated RCE in their loan origination system — before any threat actor did. Full remediation roadmap delivered within 48 hours.</p>
+              <div class="portfolio-outcome">
+                <div class="outcome-stat"><span class="outcome-num">23</span><span class="outcome-label">Critical Vulns</span></div>
+                <div class="outcome-stat"><span class="outcome-num">48h</span><span class="outcome-label">Report Delivery</span></div>
+                <div class="outcome-stat"><span class="outcome-num">100%</span><span class="outcome-label">Remediated</span></div>
+              </div>
+              <div class="portfolio-tags">
+                <span class="tag"><i class="fas fa-crosshairs"></i> Pentest</span>
+                <span class="tag"><i class="fas fa-network-wired"></i> Network</span>
+                <span class="tag"><i class="fas fa-globe"></i> Web App</span>
+              </div>
             </div>
+          </article>
+
+          <article class="portfolio-item" data-aos="fade-up" data-aos-delay="80">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <i class="fas fa-hospital-user"></i>
+              </div>
+              <div class="portfolio-gradient portfolio-gradient-2"></div>
+            </div>
+            <div class="portfolio-content">
+              <span class="portfolio-category">Healthcare</span>
+              <h3 class="portfolio-title">Hospital Ransomware Incident Response</h3>
+              <p class="portfolio-description">Contained an active ransomware incident affecting 3 hospitals within 6 hours. Recovered 98% of encrypted data from backups and provided forensic evidence used in law enforcement prosecution.</p>
+              <div class="portfolio-outcome">
+                <div class="outcome-stat"><span class="outcome-num">6h</span><span class="outcome-label">Containment</span></div>
+                <div class="outcome-stat"><span class="outcome-num">98%</span><span class="outcome-label">Data Recovered</span></div>
+                <div class="outcome-stat"><span class="outcome-num">3</span><span class="outcome-label">Sites Secured</span></div>
+              </div>
+              <div class="portfolio-tags">
+                <span class="tag"><i class="fas fa-fire-extinguisher"></i> IR</span>
+                <span class="tag"><i class="fas fa-microscope"></i> Forensics</span>
+                <span class="tag"><i class="fas fa-virus-slash"></i> Ransomware</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-item" data-aos="fade-up" data-aos-delay="0">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <i class="fas fa-scale-balanced"></i>
+              </div>
+              <div class="portfolio-gradient portfolio-gradient-3"></div>
+            </div>
+            <div class="portfolio-content">
+              <span class="portfolio-category">Legal / Litigation</span>
+              <h3 class="portfolio-title">Insider Threat Digital Forensics</h3>
+              <p class="portfolio-description">Provided court-admissible digital forensics evidence for a Fortune 500 trade secret theft case. Recovered deleted files, reconstructed attacker timeline, and delivered expert witness testimony leading to successful conviction.</p>
+              <div class="portfolio-outcome">
+                <div class="outcome-stat"><span class="outcome-num">12TB</span><span class="outcome-label">Data Analyzed</span></div>
+                <div class="outcome-stat"><span class="outcome-num">✓</span><span class="outcome-label">Conviction</span></div>
+                <div class="outcome-stat"><span class="outcome-num">100%</span><span class="outcome-label">Admissible</span></div>
+              </div>
+              <div class="portfolio-tags">
+                <span class="tag"><i class="fas fa-microscope"></i> Forensics</span>
+                <span class="tag"><i class="fas fa-gavel"></i> Expert Witness</span>
+                <span class="tag"><i class="fas fa-user-secret"></i> Insider Threat</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-item" data-aos="fade-up" data-aos-delay="80">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <div class="portfolio-gradient portfolio-gradient-4"></div>
+            </div>
+            <div class="portfolio-content">
+              <span class="portfolio-category">Technology / SaaS</span>
+              <h3 class="portfolio-title">SaaS Platform Security Overhaul</h3>
+              <p class="portfolio-description">Conducted full security architecture review for a Series B SaaS company pre-IPO. Identified critical API misconfigurations exposing 400K+ customer records, remediated before any data was compromised.</p>
+              <div class="portfolio-outcome">
+                <div class="outcome-stat"><span class="outcome-num">400K+</span><span class="outcome-label">Records Protected</span></div>
+                <div class="outcome-stat"><span class="outcome-num">0</span><span class="outcome-label">Data Breached</span></div>
+                <div class="outcome-stat"><span class="outcome-num">SOC 2</span><span class="outcome-label">Ready</span></div>
+              </div>
+              <div class="portfolio-tags">
+                <span class="tag"><i class="fas fa-cloud"></i> Cloud</span>
+                <span class="tag"><i class="fas fa-plug"></i> API Security</span>
+                <span class="tag"><i class="fas fa-clipboard-check"></i> SOC 2</span>
+              </div>
+            </div>
+          </article>
         </div>
+
+        <div class="results-cta" data-aos="fade-up">
+          <p>All engagements are handled with full NDA coverage and strict chain-of-custody protocols.</p>
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <i class="fas fa-handshake" aria-hidden="true"></i>
+            Discuss Your Project
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Blog Section -->
-    <section class="blog section" id="blog">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">INSIGHTS</span>
-                <h2 class="section-title">Cybersecurity Blog</h2>
-                <p class="section-subtitle">
-                    Latest tips, trends, and best practices in cybersecurity
-                </p>
-            </div>
-            
-            <div class="blog-grid">
-                <!-- Blog Post 1 -->
-                <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="blog-image">
-                        <div class="blog-category">Security Tips</div>
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> Dec 15, 2024</span>
-                            <span><i class="fas fa-clock"></i> 5 min read</span>
-                        </div>
-                        <h3 class="blog-title">10 Essential Password Security Best Practices</h3>
-                        <p class="blog-excerpt">
-                            Learn how to create and manage strong passwords to protect your accounts 
-                            from unauthorized access and credential theft attacks.
-                        </p>
-                        <a href="#" class="blog-link">
-                            Read More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Blog Post 2 -->
-                <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-image">
-                        <div class="blog-category">Threat Intelligence</div>
-                        <i class="fas fa-virus"></i>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> Dec 10, 2024</span>
-                            <span><i class="fas fa-clock"></i> 8 min read</span>
-                        </div>
-                        <h3 class="blog-title">Understanding Ransomware: Prevention & Response</h3>
-                        <p class="blog-excerpt">
-                            Comprehensive guide to protecting your business from ransomware attacks 
-                            and how to respond if you become a victim.
-                        </p>
-                        <a href="#" class="blog-link">
-                            Read More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Blog Post 3 -->
-                <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="blog-image">
-                        <div class="blog-category">Compliance</div>
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> Dec 5, 2024</span>
-                            <span><i class="fas fa-clock"></i> 6 min read</span>
-                        </div>
-                        <h3 class="blog-title">GDPR Compliance: A Practical Security Guide</h3>
-                        <p class="blog-excerpt">
-                            Navigate GDPR requirements with this practical guide covering data 
-                            protection, privacy controls, and compliance best practices.
-                        </p>
-                        <a href="#" class="blog-link">
-                            Read More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="blog-cta" data-aos="fade-up">
-                <a href="#" class="btn btn-outline">
-                    View All Articles <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+    <!-- ===== PROCESS ===== -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <div class="section-badge">
+            <i class="fas fa-route" aria-hidden="true"></i>
+            How It Works
+          </div>
+          <h2 class="section-title" id="process-title">A Structured Approach to Every Engagement</h2>
+          <p class="section-subtitle">From initial scoping call to final report delivery, every step is documented, transparent, and designed to deliver actionable intelligence.</p>
+        </header>
+
+        <div class="process-grid">
+          <div class="process-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="process-number">01</div>
+            <div class="process-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
+            <h3>Scoping &amp; Discovery</h3>
+            <p>Define objectives, rules of engagement, timeline, and success criteria. NDA executed before any information is shared.</p>
+            <div class="process-connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="process-number">02</div>
+            <div class="process-icon"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></div>
+            <h3>Reconnaissance &amp; Assessment</h3>
+            <p>Deep-dive analysis of your environment using industry-leading tools and manual expert techniques aligned to PTES and OWASP.</p>
+            <div class="process-connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="process-number">03</div>
+            <div class="process-icon"><i class="fas fa-file-code" aria-hidden="true"></i></div>
+            <h3>Analysis &amp; Exploitation</h3>
+            <p>Controlled exploitation of discovered vulnerabilities to demonstrate real-world impact, with evidence collection at every stage.</p>
+            <div class="process-connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="process-number">04</div>
+            <div class="process-icon"><i class="fas fa-file-lines" aria-hidden="true"></i></div>
+            <h3>Reporting &amp; Remediation</h3>
+            <p>Executive summary plus technical deep-dive with CVSS-scored findings, reproduction steps, and a prioritized remediation roadmap.</p>
+          </div>
         </div>
+
+        <div class="process-assurance" data-aos="fade-up">
+          <div class="assurance-item">
+            <i class="fas fa-file-contract" aria-hidden="true"></i>
+            <span>NDA Before Engagement</span>
+          </div>
+          <div class="assurance-divider" aria-hidden="true"></div>
+          <div class="assurance-item">
+            <i class="fas fa-link" aria-hidden="true"></i>
+            <span>Chain-of-Custody Protocols</span>
+          </div>
+          <div class="assurance-divider" aria-hidden="true"></div>
+          <div class="assurance-item">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span>48–72h Report Turnaround</span>
+          </div>
+          <div class="assurance-divider" aria-hidden="true"></div>
+          <div class="assurance-item">
+            <i class="fas fa-headset" aria-hidden="true"></i>
+            <span>Post-Report Support Included</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq section" id="faq">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">QUESTIONS</span>
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">
-                    Common questions about cybersecurity services and ethical hacking
-                </p>
-            </div>
-            
-            <div class="faq-container">
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="faq-question">
-                        <h3>What is ethical hacking and how does it differ from malicious hacking?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>
-                            Ethical hacking, also known as penetration testing, involves authorized 
-                            attempts to bypass system security to identify potential data breaches and 
-                            threats. Unlike malicious hackers, ethical hackers have explicit permission 
-                            from the organization, work within legal boundaries, document findings, and 
-                            help strengthen security rather than exploit vulnerabilities.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="faq-question">
-                        <h3>How often should my business conduct penetration testing?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>
-                            The frequency of penetration testing depends on your industry, regulatory 
-                            requirements, and risk profile. Generally, organizations should conduct 
-                            penetration testing at least annually. However, testing should also be 
-                            performed after significant infrastructure changes, new application deployments, 
-                            or security incidents. High-risk industries like finance and healthcare may 
-                            require quarterly assessments.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="faq-question">
-                        <h3>What's included in a security audit?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>
-                            A comprehensive security audit includes: evaluation of network infrastructure, 
-                            review of security policies and procedures, assessment of access controls, 
-                            examination of data protection measures, compliance verification (GDPR, HIPAA, 
-                            PCI-DSS, etc.), vulnerability scanning, security awareness evaluation, incident 
-                            response plan review, and detailed reporting with prioritized recommendations.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="faq-question">
-                        <h3>How long does a typical penetration test take?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>
-                            The duration varies based on scope and complexity. A basic web application 
-                            penetration test typically takes 1-2 weeks. Comprehensive network penetration 
-                            testing for a medium-sized organization may require 2-4 weeks. Large enterprise 
-                            assessments can take 4-8 weeks or longer. The timeline includes planning, 
-                            active testing, analysis, and detailed reporting phases.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="faq-question">
-                        <h3>Will penetration testing disrupt my business operations?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>
-                            Professional penetration testing is designed to minimize disruption. Testing 
-                            can be scheduled during off-peak hours or maintenance windows. I work closely 
-                            with your team to establish rules of engagement, define testing boundaries, 
-                            and ensure business continuity. Any potential service disruptions are 
-                            discussed and approved in advance.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="faq-question">
-                        <h3>What certifications and qualifications do you hold?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>
-                            I hold multiple industry-recognized certifications including Certified Ethical 
-                            Hacker (CEH), Offensive Security Certified Professional (OSCP), Certified 
-                            Information Systems Security Professional (CISSP), and CompTIA Security+. 
-                            With 15 years of hands-on experience in cybersecurity, I've conducted over 
-                            500 security assessments across various industries.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="faq-question">
-                        <h3>What happens if vulnerabilities are discovered?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>
-                            When vulnerabilities are identified, you receive a detailed report categorizing 
-                            findings by severity (Critical, High, Medium, Low). Each vulnerability includes 
-                            technical details, potential impact, proof-of-concept (where applicable), and 
-                            specific remediation recommendations. I provide ongoing support during the 
-                            remediation process and can perform retesting to verify fixes.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="faq-question">
-                        <h3>Do you offer ongoing security monitoring services?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>
-                            Yes, I offer continuous vulnerability monitoring and periodic security 
-                            assessments through retainer agreements. This includes automated vulnerability 
-                            scanning, threat intelligence updates, security patch management guidance, 
-                            quarterly penetration testing, and 24/7 incident response support. Continuous 
-                            monitoring helps maintain a proactive security posture.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <div class="section-badge">
+            <i class="fas fa-circle-question" aria-hidden="true"></i>
+            FAQ
+          </div>
+          <h2 class="section-title" id="faq-title">Common Questions Answered</h2>
+          <p class="section-subtitle">Everything you need to know before starting an engagement.</p>
+        </header>
+
+        <div class="faq-list" role="list">
+
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="0">
+            <summary>What types of organizations do you typically work with?</summary>
+            <p>I work with businesses of all sizes — from Series A startups to Fortune 500 enterprises — as well as legal teams requiring forensic expertise, healthcare organizations, financial institutions, and government contractors. If you operate in a regulated industry or handle sensitive data, I can help.</p>
+          </details>
+
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="60">
+            <summary>How do you handle confidentiality and NDAs?</summary>
+            <p>Every engagement begins with a mutual NDA before any information is exchanged. Client identities and engagement details are never disclosed without explicit permission. All findings are communicated exclusively through secure, encrypted channels.</p>
+          </details>
+
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="120">
+            <summary>How long does a typical penetration test take?</summary>
+            <p>Scope determines duration. A focused web application test typically takes 3–5 days. A full enterprise network penetration test may span 2–4 weeks. A scoping call is always the first step to accurately estimate timeline and resource requirements.</p>
+          </details>
+
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="180">
+            <summary>Can you assist during an active security breach?</summary>
+            <p>Yes. Incident response is available on an emergency basis, 24/7. If you're facing an active breach, ransomware attack, or data leak, contact me immediately. Response retainers are also available for organizations that want guaranteed SLA-backed response times.</p>
+          </details>
+
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="240">
+            <summary>What certifications and qualifications do you hold?</summary>
+            <p>I hold OSCP (Offensive Security Certified Professional), CEH, CISSP, CISM, and ISO 27001 Lead Auditor certifications, with over 8 years of hands-on experience across financial services, healthcare, legal, and enterprise environments.</p>
+          </details>
+
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <summary>Do you provide reports suitable for regulatory auditors or courts?</summary>
+            <p>Yes. Reports are structured to meet regulatory requirements (PCI-DSS, HIPAA, GDPR, SOC 2) and are written to be accessible to both technical teams and executive stakeholders. Forensic reports follow strict chain-of-custody standards and are admissible in legal proceedings.</p>
+          </details>
+
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="360">
+            <summary>What does a typical engagement cost?</summary>
+            <p>Pricing is scope-dependent. A focused vulnerability assessment starts at $3,500. Full-scope penetration tests begin at $8,000. Incident response is billed on a time-and-materials basis. Retainer programs are available for ongoing advisory and priority access. Contact me for a detailed quote.</p>
+          </details>
+
         </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">GET IN TOUCH</span>
-                <h2 class="section-title">Contact Me</h2>
-                <p class="section-subtitle">
-                    Ready to secure your digital assets? Let's discuss your cybersecurity needs
-                </p>
-            </div>
-            
-            <div class="contact-wrapper">
-                <!-- Contact Info -->
-                <div class="contact-info" data-aos="fade-right">
-                    <h3>Let's Start a Conversation</h3>
-                    <p>
-                        Whether you need a security audit, penetration testing, or cybersecurity 
-                        consulting, I'm here to help protect your business.
-                    </p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="method-info">
-                                <h4>Email</h4>
-                                <a href="mailto:markgrayhat14@gmail.com">markgrayhat14@gmail.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="method-info">
-                                <h4>Phone</h4>
-                                <a href="tel:+447493396675">+44 7493 396675</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <div class="method-info">
-                                <h4>Schedule a Meeting</h4>
-                                <a href="#" class="schedule-link">Book a Free Consultation</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="method-info">
-                                <h4>LinkedIn</h4>
-                                <a href="#" target="_blank">Connect with me</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="response-time">
-                        <i class="fas fa-clock"></i>
-                        <span>Typical response time: Within 24 hours</span>
-                    </div>
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <div class="section-badge">
+            <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+            Start an Engagement
+          </div>
+          <h2 class="section-title" id="contact-title">Let's Secure What Matters</h2>
+          <p class="section-subtitle">Reach out for a confidential, no-obligation discussion about your security needs. All inquiries handled with full discretion.</p>
+        </header>
+
+        <div class="contact-grid">
+
+          <div class="contact-info-card" data-aos="fade-right">
+            <h3>Direct Contact</h3>
+            <p>Prefer to reach out directly? All channels are monitored and encrypted. Response time is typically within 4 business hours.</p>
+
+            <ul class="contact-info-list" aria-label="Contact information">
+              <li class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                <div>
+                  <strong>Secure Email</strong>
+                  <a href="mailto:contact@grayhatglobal.com">contact@grayhatglobal.com</a>
                 </div>
-                
-                <!-- Contact Form -->
-                <div class="contact-form-wrapper" data-aos="fade-left">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">
-                                <i class="fas fa-user"></i> Full Name *
-                            </label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                required 
-                                placeholder="John Doe"
-                            >
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">
-                                <i class="fas fa-envelope"></i> Email Address *
-                            </label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                required 
-                                placeholder="john@company.com"
-                            >
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">
-                                <i class="fas fa-phone"></i> Phone Number
-                            </label>
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                name="phone" 
-                                placeholder="+44 7493 396675"
-                            >
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company">
-                                <i class="fas fa-building"></i> Company Name
-                            </label>
-                            <input 
-                                type="text" 
-                                id="company" 
-                                name="company" 
-                                placeholder="Your Company"
-                            >
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">
-                                <i class="fas fa-clipboard-list"></i> Service Interested In *
-                            </label>
-                            <select id="service" name="service" required>
-                                <option value="">Select a service</option>
-                                <option value="penetration-testing">Penetration Testing</option>
-                                <option value="security-audit">Security Audit</option>
-                                <option value="vulnerability-assessment">Vulnerability Assessment</option>
-                                <option value="digital-forensics">Digital Forensics</option>
-                                <option value="security-consulting">Security Consulting</option>
-                                <option value="security-training">Security Training</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">
-                                <i class="fas fa-message"></i> Message *
-                            </label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                required 
-                                rows="5" 
-                                placeholder="Tell me about your cybersecurity needs..."
-                            ></textarea>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <input 
-                                type="checkbox" 
-                                id="urgent" 
-                                name="urgent"
-                            >
-                            <label for="urgent">This is an urgent security matter</label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
+              </li>
+              <li class="contact-info-item">
+                <div class="contact-icon"><i class="fab fa-signal-messenger" aria-hidden="true"></i></div>
+                <div>
+                  <strong>Signal (Encrypted)</strong>
+                  <span>Available on request</span>
                 </div>
+              </li>
+              <li class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
+                <div>
+                  <strong>Response Time</strong>
+                  <span>Within 4 business hours</span>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-globe" aria-hidden="true"></i></div>
+                <div>
+                  <strong>Availability</strong>
+                  <span>Global engagements (remote &amp; on-site)</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-trust">
+              <div class="trust-badge">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+                <span>All inquiries protected by NDA</span>
+              </div>
+              <div class="trust-badge">
+                <i class="fas fa-user-secret" aria-hidden="true"></i>
+                <span>Anonymous consultations available</span>
+              </div>
             </div>
+          </div>
+
+          <div class="contact-form-wrapper" data-aos="fade-left">
+            <form class="contact-form" id="contactForm" action="mailto:contact@grayhatglobal.com" method="post" enctype="text/plain" aria-label="Contact form">
+              <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+
+              <!-- Honeypot anti-spam trap (hidden from humans) -->
+              <input type="text" name="_gotcha" id="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" aria-required="true" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" aria-required="true" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone (Optional)</label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="company">Organization</label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-building" aria-hidden="true"></i>
+                    <input type="text" id="company" name="company" placeholder="Company or Law Firm" autocomplete="organization" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Required <span aria-hidden="true">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                  <select id="service" name="service" required aria-required="true">
+                    <option value="" disabled selected>Select a service…</option>
+                    <option value="pentest">Penetration Testing</option>
+                    <option value="forensics">Digital Forensics</option>
+                    <option value="vuln-assessment">Vulnerability Assessment</option>
+                    <option value="incident-response">Incident Response</option>
+                    <option value="audit">Security Audit &amp; Compliance</option>
+                    <option value="advisory">Security Advisory / vCISO</option>
+                    <option value="other">Other / Not Sure</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Details <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" placeholder="Brief description of your security needs, timeline, and any specific constraints or requirements…" rows="5" required aria-required="true"></textarea>
+              </div>
+
+              <div class="form-group form-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="urgent" name="urgent" />
+                  <span class="checkbox-custom" aria-hidden="true"></span>
+                  <span>This is an urgent or active incident requiring immediate response</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit btn-full" aria-label="Submit contact form">
+                <span class="btn-text"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send Secure Message</span>
+                <span class="btn-loading" aria-hidden="true"><i class="fas fa-circle-notch fa-spin"></i> Sending…</span>
+              </button>
+
+              <p class="form-disclaimer">
+                <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                Submissions are encrypted and handled confidentially. Response within 4 business hours.
+              </p>
+            </form>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Mark Grayhat</h4>
-                    <p>Certified Ethical Hacker & Cybersecurity Consultant</p>
-                </div>
-                <div class="footer-section">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h5>Connect</h5>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Mark Grayhat. All rights reserved. | Cybersecurity Consulting Services</p>
-            </div>
-        </div>
-    </footer>
+  </main>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="js/script.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-gradient" aria-hidden="true"></div>
+    <div class="container footer-content">
+
+      <div class="footer-brand">
+        <a href="#home" class="logo" aria-label="Grayhat Global — Back to top">
+          <div class="logo-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
+          <span>GRAYHAT<span class="logo-accent">GLOBAL</span></span>
+        </a>
+        <p>Digital Forensics &amp; Cybersecurity Consultant. Helping organizations uncover risks, investigate incidents, and build lasting defenses.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X profile"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="#services">Penetration Testing</a></li>
+            <li><a href="#services">Digital Forensics</a></li>
+            <li><a href="#services">Vulnerability Assessment</a></li>
+            <li><a href="#services">Incident Response</a></li>
+            <li><a href="#services">Security Audits</a></li>
+            <li><a href="#services">Advisory / vCISO</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Sectors</h4>
+          <ul role="list">
+            <li><a href="#industries">Financial Services</a></li>
+            <li><a href="#industries">Healthcare</a></li>
+            <li><a href="#industries">Legal &amp; Litigation</a></li>
+            <li><a href="#industries">Technology</a></li>
+            <li><a href="#industries">Government</a></li>
+            <li><a href="#industries">Enterprise</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Site</h4>
+          <ul role="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#results">Case Studies</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="currentYear"></span> Grayhat Global. All rights reserved.</p>
+        <div class="footer-bottom-badges">
+          <span class="cert-mini"><i class="fas fa-lock" aria-hidden="true"></i> SSL Secured</span>
+          <span class="cert-mini"><i class="fas fa-shield-halved" aria-hidden="true"></i> OSCP</span>
+          <span class="cert-mini"><i class="fas fa-certificate" aria-hidden="true"></i> CISSP</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top of page" title="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
 </body>
 </html>
